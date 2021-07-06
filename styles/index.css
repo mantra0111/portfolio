@@ -47,8 +47,8 @@ body{
     margin: 0.5rem 3rem;
 }
 
-.main-section{
-    height: 90vh;
+section{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

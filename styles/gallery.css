@@ -1,0 +1,44 @@
+.project-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-section h1{
+    font-size: 2rem;
+}
+
+.masonry-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.project-card {
+    height: 400px;
+    flex-grow: 1;  
+    margin: 0rem 1rem 1rem 0rem;
+}
+  
+.project-media {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.project-info{
+    background-color: crimson;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top: -101.7%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
