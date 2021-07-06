@@ -12,12 +12,15 @@ const presentationText = document.querySelector('.presentation-text-hidden')
 const splittedUrl = document.location.href.split("/")
 const currentLocation = splittedUrl[splittedUrl.length - 1]
 
-
+console.log(currentLocation)
 // these are the links inside the navbar 
 
 const homeLink = document.querySelector('#home-link')
 
 switch (currentLocation) {
+    case '':
+        homeLink.style.color = 'crimson'
+        break;
     case 'index.html':
         homeLink.style.color = 'crimson'
         break;
