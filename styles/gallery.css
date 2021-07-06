@@ -41,4 +41,5 @@
 
 .project-card:hover .project-info {
     opacity: 1;
+    transform: scale(0);
 }

@@ -33,10 +33,13 @@ const makeProjectCard = ({ imgUrl, projectName }) => {
 
 const projectListContainer = document.querySelector('.masonry-gallery')
 
-projects.forEach((project) => {
-    projectListContainer.innerHTML +=
-        makeProjectCard({
-            imgUrl: project.mediaLocation,
-            projectName: project.projectName
-        })
-})
+function render() {
+    projects.forEach((project) => {
+        projectListContainer.innerHTML +=
+            makeProjectCard({
+                imgUrl: project.mediaLocation,
+                projectName: project.projectName
+            })
+    })
+}
+

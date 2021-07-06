@@ -14,15 +14,20 @@ const currentLocation = splittedUrl[splittedUrl.length - 1]
 
 console.log(currentLocation)
 // these are the links inside the navbar 
-
 const homeLink = document.querySelector('#home-link')
 
 switch (currentLocation) {
     case '':
-        homeLink.style.color = 'crimson'
+        homeLink.style.borderBottom = '0.2rem solid crimson';
         break;
     case 'index.html':
-        homeLink.style.color = 'crimson'
+        homeLink.style.borderBottom = '0.2rem solid crimson';
+        break;
+    case 'index.html#projects':
+        homeLink.style.borderBottom = '0.2rem solid crimson';
+        break;
+    case '#projects':
+        homeLink.style.borderBottom = '0.2rem solid crimson';
         break;
 
     default:
@@ -36,7 +41,6 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
             presentationText.classList.remove('presentation-text-hidden');
             presentationText.classList.add('presentation-text-visible');
             authorsName.style.color = 'crimson'
-
             return
         }
 
@@ -44,6 +48,6 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
         presentationText.classList.add('presentation-text-hidden');
         presentationText.classList.remove('presentation-text-visible');
     })
-}, { threshold: 0.4 })
+}, { threshold: 0.55 })
 
 heroObserver.observe(heroSection)
