@@ -1,0 +1,57 @@
+:root{
+    --active-text-light : rgb(220, 220, 220);
+    --active-text-dark : rgb(2, 2, 2);
+}
+
+.navbar-links-container{
+    width: 100vw;
+    position: fixed;
+    padding: 1rem 0rem 1rem 0rem;
+    transition: all 1s;
+    z-index: 100;
+    display: flex;
+
+}
+
+.navbar-links-container-scrolled{
+   background-color: var(--active-text-light);
+}
+.navbar-links-container-scrolled ul li a{
+    color: var(--active-text-dark);
+}
+
+.navbar-links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0rem;
+    display: flex;
+    width: 100%;
+}
+
+.navbar-links-list li a{
+    color: var(--active-text-light);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0.5rem 3rem;
+    transition: all 0.5s;
+}
+.navbar-links-list li a:hover{
+    color: crimson;
+}
+
+.hamburger-button{
+    display: flex;
+    margin: 0rem 2rem 0rem 0rem;
+    transform: rotateZ(90deg);
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.hamburger-button > *{
+    display: flex;
+    margin: 0rem 2rem 0rem 0rem;
+    transform: rotateZ(90deg);
+    font-size: 1.5rem;
+    color: inherit;
+}

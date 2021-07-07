@@ -1,21 +1,14 @@
-// I use the Hero section to be observed by the heroObserver
-const heroSection = document.querySelector('.main-section')
-
-
 const navbar = document.querySelector('.navbar-links-container')
-// these are the headlines inside the hero text
-const authorsName = document.querySelector('.authors-name')
-const presentationText = document.querySelector('.presentation-text-hidden')
-
-
+// NAVBAR LOCATION HIGHLIGHT
 // determine which link in inside the navbar should be highlighted with crimson color
 const splittedUrl = document.location.href.split("/")
 const currentLocation = splittedUrl[splittedUrl.length - 1]
 
-console.log(currentLocation)
-// these are the links inside the navbar 
+// NAVBAR LINKS 
 const homeLink = document.querySelector('#home-link')
 
+// this controls the navbar styling to highlight the page the user 
+// is currently in
 switch (currentLocation) {
     case '':
         homeLink.style.borderBottom = '0.2rem solid crimson';
@@ -34,6 +27,15 @@ switch (currentLocation) {
         break;
 }
 
+
+// OBSERVER EFFECTS
+// I use the Hero section to be observed by the heroObserver
+const heroSection = document.querySelector('.main-section')
+// these are the headlines inside the hero text
+const authorsName = document.querySelector('.authors-name')
+const presentationText = document.querySelector('.presentation-text-hidden')
+
+
 const heroObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -43,7 +45,6 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
             authorsName.style.color = 'crimson'
             return
         }
-
         navbar.classList.add('navbar-links-container-scrolled');
         presentationText.classList.add('presentation-text-hidden');
         presentationText.classList.remove('presentation-text-visible');
@@ -51,3 +52,11 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.55 })
 
 heroObserver.observe(heroSection)
+
+
+
+document.onload = () => {
+    if (window.innerWidth < 1000) {
+        navbarLinksList.style.display = 'none'
+    }
+}
