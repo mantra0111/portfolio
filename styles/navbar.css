@@ -10,7 +10,7 @@
     transition: all 1s;
     z-index: 100;
     display: flex;
-
+    align-items: center;
 }
 
 .navbar-links-container-scrolled{
@@ -20,12 +20,55 @@
     color: var(--active-text-dark);
 }
 
+#hamburger{
+    font-size: 1.5rem;
+    pointer-events: none;
+    margin: 0rem 0rem 0rem 1rem;
+    height: 0px;
+    width: 0px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hamburger-middle-bar{
+    position: relative;
+    display: none;
+    height: 0.3rem;
+    border-radius: 2rem;
+    width: 90%;
+    background-color: var(--active-text-dark);
+}
+#hamburger-middle-bar::before{
+    position: relative;
+    top: -2rem;
+    content: '';
+    display: none;
+    height: 0.3rem;
+    border-radius: 2rem;
+    width: 100%;
+    background-color: var(--active-text-dark);
+}
+#hamburger-middle-bar::after{
+    position: relative;
+    top: -2.8rem;
+    content: '';
+    display: none;
+    height: 0.3rem;
+    border-radius: 2rem;
+    width: 100%;
+    background-color: var(--active-text-dark);
+}
+
+
 .navbar-links-list {
     list-style: none;
     margin: 0;
     padding: 0rem;
     display: flex;
     width: 100%;
+    transition: all 1s;
 }
 
 .navbar-links-list li a{
@@ -40,18 +83,40 @@
     color: crimson;
 }
 
-.hamburger-button{
-    display: flex;
-    margin: 0rem 2rem 0rem 0rem;
-    transform: rotateZ(90deg);
-    font-size: 1.5rem;
-    color: inherit;
-}
-
-.hamburger-button > *{
-    display: flex;
-    margin: 0rem 2rem 0rem 0rem;
-    transform: rotateZ(90deg);
-    font-size: 1.5rem;
-    color: inherit;
+@media only screen and (max-width : 800px) {
+    .navbar-links-list {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+    .navbar-links-container{
+        background-color: var(--active-text-light);
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .navbar-links-list li{
+        margin: 1.4rem 0rem 0rem 0rem;
+    }
+    .navbar-links-list li a{
+        color: var(--active-text-dark);
+        margin: 1rem 1rem 1rem 1rem;
+    }
+    #hamburger{
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        pointer-events: all;
+        display: flex;
+        background-color: transparent;
+    }
+    #hamburger-middle-bar{
+        display: inline-block;
+    }
+    #hamburger-middle-bar::before{
+            display: inline-block;
+    }
+    #hamburger-middle-bar::after{
+        display: inline-block;
+    }
 }

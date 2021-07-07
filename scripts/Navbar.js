@@ -43,8 +43,10 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
             presentationText.classList.remove('presentation-text-hidden');
             presentationText.classList.add('presentation-text-visible');
             authorsName.style.color = 'crimson'
+            hamburgerButton.style.color = "var(--active-text-light)"
             return
         }
+        hamburgerButton.style.color = "var(--active-text-dark)"
         navbar.classList.add('navbar-links-container-scrolled');
         presentationText.classList.add('presentation-text-hidden');
         presentationText.classList.remove('presentation-text-visible');
@@ -55,8 +57,29 @@ heroObserver.observe(heroSection)
 
 
 
-document.onload = () => {
-    if (window.innerWidth < 1000) {
-        navbarLinksList.style.display = 'none'
+const hamburgerButton = document.querySelector('#hamburger')
+const navbarLinksList = document.querySelector('.navbar-links-list')
+let isOpen = false
+
+hamburgerButton.addEventListener('click', () => {
+    if (!isOpen) {
+        navbarLinksList.style.display = 'flex'
+        isOpen = !isOpen
+        return
     }
+    navbarLinksList.style.display = 'none'
+    isOpen = !isOpen
+})
+
+window.onresize = () => {
+    if (window.innerWidth <= 800) {
+        console.log(window.innerWidth)
+        navbarLinksList.style.display = 'none'
+        isOpen = false
+        return
+    }
+    navbarLinksList.style.display = 'flex'
+    isOpen = false
+    console.log(window.innerWidth)
 }
+
