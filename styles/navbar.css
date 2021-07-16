@@ -6,9 +6,10 @@
 .navbar-links-container{
     width: 100vw;
     position: fixed;
+    z-index: 1;
+
     padding: 1rem 0rem 1rem 0rem;
     transition: all 1s;
-    z-index: 100;
     display: flex;
     align-items: center;
 }

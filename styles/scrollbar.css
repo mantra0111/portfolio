@@ -15,8 +15,11 @@ body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
     border-radius: 1rem;
+
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background-color: crimson;
+    
 }
+

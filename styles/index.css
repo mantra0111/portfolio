@@ -48,6 +48,7 @@ section{
 
 .social-icons{
     margin: 2rem 0rem 0rem 0rem;
+    position: sticky;
 }
 
 .social-icon-anchor{
@@ -62,12 +63,14 @@ section{
     width: 50px;
     transition: all 0.2s;
     border-radius: 50%;
-    animation: 0.5s infinite socialIconAnimation;
+    animation: 1s infinite socialIconAnimation;
+    filter: drop-shadow(0 -0.1rem 0.5rem crimson);
 }
 .social-icon-anchor img:hover{
     animation: none;
     transform: scale(1.4);
     border: 0.2rem solid var(--active-text-light);
+    filter: drop-shadow(0 -0.1rem 0.3rem rgb(236, 236, 236));
 }
 
 @keyframes socialIconAnimation {
@@ -78,10 +81,21 @@ section{
         transform: scale(1.1);
     }
     100%{
-        transform: scale(1);
+        transform: scale(1) ;
     }
 }
 
+@keyframes socialIconAnimationBig {
+    0%{
+        transform: scale(1.4);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1.4) ;
+    }
+}
 
 .presentation-text-hidden{
     opacity: 0;

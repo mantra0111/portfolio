@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+
+section{
+    height: 100vh;
+    margin: 0rem 0rem 3rem 0rem;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:last-child{
+    margin: 0;
+}
+
+#primera{
+    background-color: crimson;
+    color: white;
+}
+
+#segunda{
+    background-color: cornflowerblue;
+}
+
+#tercera{
+    background-color: darkgreen;
+}
+
+
+@media only screen and (max-width:800px) {
+    #primera{
+        background-color: white;
+        color:crimson;
+        box-shadow: 0rem 0rem 1rem crimson;
+    }
+    #segunda{
+        color: cornflowerblue;
+        background-color: white;
+        box-shadow: 0rem 0rem 1rem cornflowerblue;
+    }
+    #tercera{
+        box-shadow: 0rem 0rem 1rem darkgreen;
+        color: darkgreen;
+        background-color: white;
+    }
+    section{
+        font-size: 5rem;
+    }
+}
