@@ -2,7 +2,7 @@ const splittedUrl = document.location.href.split("/")
 const currentLocation = splittedUrl[splittedUrl.length - 1]
 const homeLink = document.querySelector('#home-link')
 
-let activeLinkStyle = '0.2rem solid var(--active-text-dark)'
+let activeLinkStyle = '0.2rem solid var(--active-text-light)'
 
 switch (currentLocation) {
     case '':

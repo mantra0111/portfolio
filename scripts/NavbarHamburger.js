@@ -36,3 +36,12 @@ window.onresize = () => {
     openHamburger()
 }
 
+// close the navbar when a link is clicked
+
+const navbarLinks = document.querySelectorAll('.navbar-link')
+
+navbarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeHamburger()
+    })
+})

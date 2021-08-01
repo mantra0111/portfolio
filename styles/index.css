@@ -5,12 +5,9 @@
     --active-text-dark : rgb(2, 2, 2);
     --my-crimson :crimson;
 }
-html{
-    scroll-behavior: smooth;
-}
 *{
     font-family: 'poppins', sans-serif;
-    color: var(--active-text-light);
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;

@@ -1,45 +1,127 @@
+:root{
+    --card-height : 250px;
+    --card-width : calc( 1.3 * var(--card-height));
+        --active-text-light : rgb(220, 220, 220);
+        --active-text-dark : rgb(2, 2, 2);
+        --my-crimson :crimson;
+}
+
 .project-section{
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project-card {
+    height: var(--card-height);
+    width: var(--card-width);
+    background-color: black;
+    margin: 1rem;
+    box-shadow: 0rem 0rem 0.5rem gray;
+}
+
+.project-card:hover{
+    box-shadow: 0rem 0rem 0.5rem crimson;
+}
+
+.project-info{
+    position: relative;
+    display: inline-block;
+    height: var(--card-height) ;
+    width: var(--card-width);
+    top: calc(-1.028 * var(--card-height));
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.project-info{
+    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.project-section h1{
-    font-size: 2rem;
-}
-
-.masonry-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    list-style: none;
-}
-
-.project-card {
-    height: 400px;
-    flex-grow: 1;  
-    margin: 0rem 1rem 1rem 0rem;
-}
-  
-.project-media {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-}
-
-.project-info{
-    background-color: crimson;
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    top: -101.7%;
-    opacity: 0;
-    transition: all 1s;
-}
-
-
-.project-card:hover .project-info {
+.project-info:hover {
     opacity: 1;
-    transform: scale(0);
+}
+
+.project-links-container{
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.project-info-title{
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+}
+.project-info-description{
+    margin: 0rem 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+
+
+.project-links-container a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    background-color: black;
+    display: inline-block;
+    font-size: 0.8rem;
+    width: 100px;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+
+
+
+@media only screen and (min-width : 801px) {
+    .project-media {
+        object-fit: cover;
+        height: var(--card-height);
+        width: var(--card-width);
+    }
+    .project-links-container a:hover{
+        color: black;
+        background-color: white;
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .project-section{
+        width: 100%;
+    }
+    .project-card{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .project-media{
+        width: 100%;
+        border: 0.15rem solid white;
+        box-sizing: border-box;
+        border-radius: .5rem;
+    }
+    .project-info {
+        position: static;
+        display: inline-block;
+        height: fit-content;
+        width: fit-content;
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 1rem;
+        opacity: 1;
+        transition: all 0.5s;
+        border-radius: .5rem;
+    }
 }

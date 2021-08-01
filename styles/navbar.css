@@ -72,8 +72,12 @@
     margin: 0.5rem 3rem;
     transition: all 0.5s;
 }
-.navbar-links-list li:hover a{
-    color: var(--active-text-dark);
+
+.navbar-links-list li {
+    transition: all 0.3s;
+}
+.navbar-links-list li:hover{
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width : 800px) {
