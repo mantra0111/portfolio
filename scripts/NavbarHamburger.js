@@ -10,8 +10,11 @@ const openHamburger = () => {
 }
 
 const closeHamburger = () => {
-    isOpen = false
-    navbarLinksList.style.display = 'none'
+
+    if (window.innerWidth <= 800) {
+        isOpen = false
+        navbarLinksList.style.display = 'none'
+    }
 }
 
 if (window.innerWidth <= 800) {
