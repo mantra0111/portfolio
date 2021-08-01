@@ -3,21 +3,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./scripts/NavbarLinkHighLight.js"></script>
-    <script defer src="./scripts/NavbarObserver.js"></script>
-    <script defer src="scripts/NavbarHamburger.js"></script>
-    <script defer src="./scripts/renderProjects.js"></script>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/scrollbar.css">
     <link rel="stylesheet" href="./styles/gallery.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/loadingSection.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts/loadingSection.js"></script>
+    <script defer src="./scripts/NavbarLinkHighLight.js"></script>
+    <script defer src="./scripts/NavbarObserver.js"></script>
+    <script defer src="scripts/NavbarHamburger.js"></script>
+    <script defer src="./scripts/renderProjects.js"></script>
     <title>Mateo Sierra</title>
 </head>
 
 <body>
+    <div id="loading-section">
+        Welcome ;)
+    </div>
     <header>
         <nav class="navbar-links-container">
             <span id="hamburger">
@@ -33,7 +38,7 @@
 
     <main>
 
-        <section class="main-section hero-section">
+        <section style="background-image: url(./images/hero-background.jpg);" class="main-section hero-section">
             <div>
                 <h1 class="authors-name">Mateo Sierra</h1>
                 <h2 class="presentation-text-hidden">Javascript, React, Responsive design And more </h2>
@@ -55,6 +60,7 @@
             </section>
         </div>
     </main>
+
 </body>
 
 </html>
