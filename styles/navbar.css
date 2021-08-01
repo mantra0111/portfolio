@@ -1,24 +1,24 @@
 :root{
     --active-text-light : rgb(220, 220, 220);
     --active-text-dark : rgb(2, 2, 2);
+    --my-crimson : crimson;
 }
 
 .navbar-links-container{
     width: 100vw;
     position: fixed;
     z-index: 1;
-
     padding: 1rem 0rem 1rem 0rem;
-    transition: all 1s;
+    transition: background-color 0.7s;
     display: flex;
     align-items: center;
 }
 
 .navbar-links-container-scrolled{
-   background-color: var(--active-text-light);
+   background-color: var(--my-crimson);
 }
 .navbar-links-container-scrolled ul li a{
-    color: var(--active-text-dark);
+    color: var(--active-text-light);
 }
 
 #hamburger{
@@ -41,25 +41,18 @@
     width: 90%;
     background-color: var(--active-text-dark);
 }
-#hamburger-middle-bar::before{
+#hamburger-middle-bar::before,#hamburger-middle-bar::after{
     position: relative;
     top: -2rem;
     content: '';
     display: none;
-    height: 0.3rem;
+    height: 0.25rem;
     border-radius: 2rem;
     width: 100%;
     background-color: var(--active-text-dark);
 }
 #hamburger-middle-bar::after{
-    position: relative;
     top: -2.8rem;
-    content: '';
-    display: none;
-    height: 0.3rem;
-    border-radius: 2rem;
-    width: 100%;
-    background-color: var(--active-text-dark);
 }
 
 
@@ -69,7 +62,6 @@
     padding: 0rem;
     display: flex;
     width: 100%;
-    transition: all 1s;
 }
 
 .navbar-links-list li a{
@@ -80,8 +72,8 @@
     margin: 0.5rem 3rem;
     transition: all 0.5s;
 }
-.navbar-links-list li a:hover{
-    color: crimson;
+.navbar-links-list li:hover a{
+    color: var(--active-text-dark);
 }
 
 @media only screen and (max-width : 800px) {
@@ -91,7 +83,7 @@
         margin: 1rem 0rem 0rem 0rem;
     }
     .navbar-links-container{
-        background-color: var(--active-text-light);
+        background-color: var(--my-crimson);
         flex-direction: column;
         align-items: flex-start;
         margin: 0rem 0rem 0rem 0rem;
@@ -100,7 +92,7 @@
         margin: 1.4rem 0rem 0rem 0rem;
     }
     .navbar-links-list li a{
-        color: var(--active-text-dark);
+        color: var(--active-text-light);
         margin: 1rem 1rem 1rem 1rem;
     }
     #hamburger{
