@@ -81,5 +81,3 @@ function render() {
 
 render()
 
-// here we manage the hover effects
-
