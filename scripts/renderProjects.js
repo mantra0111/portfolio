@@ -8,16 +8,16 @@ const projects = [
     {
         projectName: "Quiz application",
         mediaLocation: "./images/quizz-app.PNG",
-        repoURL: "https://github.com/mantra0111/front-code-challenge",
-        demoURL: "https://mantra0111.github.io/front-code-challenge/#/",
+        repoUrl: "https://github.com/mantra0111/front-code-challenge",
+        demoUrl: "https://mantra0111.github.io/front-code-challenge/#/",
         cardColor: "crimson",
         description: "Made with react and bootstrap this application lets you respond a random 11 question quiz",
     },
     {
         projectName: "React ecommerce",
         mediaLocation: "./images/react-ecommerce.PNG",
-        repoURL: "https://github.com/mantra0111/ecommerce-example",
-        demoURL: "https://mantra0111.github.io/ecommerce-example/#/",
+        repoUrl: "https://github.com/mantra0111/ecommerce-example",
+        demoUrl: "https://mantra0111.github.io/ecommerce-example/#/",
         cardColor: "crimson",
         description: "using a node.js api and react to display the products and create an ecommerce experience for the user",
     },
@@ -71,8 +71,8 @@ function render() {
             makeProjectCard({
                 imgUrl: project.mediaLocation,
                 projectName: project.projectName,
-                projectDemo: project.demoURL,
-                projectRepo: project.repoURL,
+                projectDemo: project.demoUrl,
+                projectRepo: project.repoUrl,
                 cardColor: project.cardColor,
                 projectDescription: project.description,
             })
